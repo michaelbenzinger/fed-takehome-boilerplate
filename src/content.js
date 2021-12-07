@@ -1,18 +1,18 @@
 export const articles = [
   {
-    color: '#ebebeb',
+    color: 'var(--gray-1, #ebebeb)',
     title: 'Article 1',
     date: new Date('Aug 8, 2013'),
     text: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam.',
   },
   {
-    color: '#c7c7c7',
+    color: 'var(--gray-2, #c7c7c7)',
     title: 'Article 2',
     date: new Date('Aug 14, 2013'),
     text: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam.',
   },
   {
-    color: '#7f7f7f',
+    color: 'var(--gray-5, #7f7f7f)',
     title: 'Article 3',
     date: new Date('Aug 21, 2013'),
     text: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam.',
@@ -20,7 +20,7 @@ export const articles = [
 ];
 
 export const feature = {
-  color: '#909090',
+  color: 'var(--gray-4, #909090)',
   title: 'Get the New Razda template',
   subtitle: 'The best new way to showcase your work',
   text1:

@@ -3,10 +3,17 @@ import styled from 'styled-components';
 function Article(props) {
   const { article } = props;
 
-  const ArticleWrapper = styled.div`
+  const ArticleWrapper = styled.a`
+    display: block;
     background-color: white;
     padding: 0.88rem;
     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+    transition: color 0.4s, box-shadow 0.4s;
+    &:hover {
+      color: var(--gray-6);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
+    }
   `;
   const ArticleImage = styled.div`
     background-color: ${article.color};
@@ -52,14 +59,17 @@ function Articles(props) {
     display: flex;
     flex-direction: row;
     gap: 1.75rem;
-    padding: 0 2.6rem;
+    padding: 0 var(--page-margin);
+    @media (max-width: 640px) {
+      display: block;
+    }
   `;
 
   return (
     <ArticlesSection>
       <ArticlesContainer>
         {articles.map(article => (
-          <Article article={article} />
+          <Article key={article.title} article={article} />
         ))}
       </ArticlesContainer>
     </ArticlesSection>

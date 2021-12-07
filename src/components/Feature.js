@@ -10,13 +10,19 @@ function Feature(props) {
   const FeatureContainer = styled.div`
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 4.375rem 2.6rem 0rem;
+    padding: 2.375rem var(--page-margin) 0rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4.375rem;
+    grid-template-areas: 'image content';
+    gap: min(5vw, 4.375rem);
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'content' 'image';
+      gap: 2.8rem;
+    }
   `;
   const FeatureImageContainer = styled.div`
-    flex: 1 1 45%;
+  grid-area: image;
     padding: 1rem;
     height: 100%
     background-color: white;
@@ -24,15 +30,19 @@ function Feature(props) {
   `;
   const FeatureImage = styled.div`
     height: 100%;
+    min-height: 25rem;
     width: 100%;
     background-color: ${feature.color};
   `;
   const FeatureContent = styled.div`
-    flex: 1 1 50%;
+    grid-area: content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-height: ${sectionHeight};
+    @media (max-width: 768px) {
+      min-height: initial;
+    }
   `;
   const FeatureTitle = styled.h2`
     margin: 0 0 0.75rem;
@@ -44,6 +54,7 @@ function Feature(props) {
     font-size: 1.25rem;
     font-weight: 700;
     text-align: justify;
+    margin-bottom: 2.5rem;
     width: 90%;
   `;
   const FeatureTextStroke = styled.span`

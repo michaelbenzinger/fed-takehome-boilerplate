@@ -10,4 +10,13 @@ export const Button = styled.button`
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: var(--gray-7);
+  }
+  &:active {
+    background-color: black;
+    color: var(--gray-1);
+    transition: background-color 0s;
+  }
 `;

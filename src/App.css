@@ -1,5 +1,15 @@
+/* Variables and basic styles that are shared by many components */
+
 :root {
+  --page-margin: clamp(1rem, 3.5vw, 2.6rem);
   --container-width: 1293px;
+  --gray-1: #ebebeb;
+  --gray-2: #c7c7c7;
+  --gray-3: #b5b5b5;
+  --gray-4: #909090;
+  --gray-5: #7f7f7f;
+  --gray-6: #595959;
+  --gray-7: #2e2e2e;
 }
 html {
   font-size: 16px;

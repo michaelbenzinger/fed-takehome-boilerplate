@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 function Footer() {
   const FooterSection = styled.section`
-    padding: 4.5rem 2.6rem 0;
+    padding: 4.5rem var(--page-margin) 0;
   `;
   const FooterContainer = styled.div`
     display: flex;
@@ -16,6 +16,14 @@ function Footer() {
   `;
   const FooterLink = styled.a`
     font-weight: 700;
+    transition: color 0.2s;
+    &:hover {
+      color: var(--gray-6);
+    }
+    &:active {
+      color: black;
+      transition: color 0s;
+    }
   `;
 
   return (
