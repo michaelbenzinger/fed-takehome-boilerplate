@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { useState } from 'react';
 import { ReactComponent as Logo } from '../logo.svg';
+import breakpoints from '../breakpoints';
 
 const Link = styled.a`
   color: var(--gray-6, #595959);
@@ -31,7 +32,7 @@ function MobileLinks() {
 
   const MobileLinksWrapper = styled.div`
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.sm}) {
       display: block;
     }
   `;
@@ -124,7 +125,7 @@ function Nav() {
     display: flex;
     flex-direction: row;
     gap: min(5vw, 4.75rem);
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.sm}) {
       display: none;
     }
   `;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button } from './Button';
+import breakpoints from '../breakpoints';
 
 function Feature(props) {
   const { feature } = props;
@@ -15,7 +16,7 @@ function Feature(props) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'image content';
     gap: min(5vw, 4.375rem);
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.md}) {
       grid-template-columns: 1fr;
       grid-template-areas: 'content' 'image';
       gap: 2.8rem;
@@ -40,7 +41,7 @@ function Feature(props) {
     flex-direction: column;
     align-items: flex-start;
     min-height: ${sectionHeight};
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.md}) {
       min-height: initial;
     }
   `;

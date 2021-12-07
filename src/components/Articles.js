@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from '../breakpoints';
 
 function Article(props) {
   const { article } = props;
@@ -60,7 +61,7 @@ function Articles(props) {
     flex-direction: row;
     gap: 1.75rem;
     padding: 0 var(--page-margin);
-    @media (max-width: 640px) {
+    @media (max-width: ${breakpoints.sm}) {
       display: block;
     }
   `;
