@@ -1,0 +1,31 @@
+:root {
+  --container-width: 1293px;
+}
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+a {
+  cursor: pointer;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0 0 1.75rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  margin: 0 0 1.5rem;
+}
